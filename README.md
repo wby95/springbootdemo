@@ -4,7 +4,7 @@
   
 
   
-  #配置文件
+  ## 配置文件
   ```
   server:
     port: 8080   配置端口号
@@ -15,7 +15,7 @@
   age: 18
   content: "cupSize: ${cupSize}, age: ${age}"
   ```
-  #获取上述配置文件的信息
+  ## 获取上述配置文件的信息
   ```
   @RestController
   public class HelloController {
@@ -36,7 +36,7 @@
       }
   }
 ```
-#  @Value("${age}")太过麻烦&另一种获取方式
+##  @Value("${age}")太过麻烦&另一种获取方式
 ```
 @Component
 @ConfigurationProperties(prefix = "person")
@@ -78,7 +78,7 @@ public class TestPersonController {
     }
 }
 ```
-  # spring 连接数据库的配置
+  ## spring 连接数据库的配置
    ```
   spring:
     datasource:
@@ -93,7 +93,7 @@ public class TestPersonController {
    
    ```  
 
- #pom.xml添加一下依赖
+ ## pom.xml添加一下依赖
  ```
 <dependency>
    <groupId>org.springframework.boot</groupId>
@@ -105,7 +105,7 @@ public class TestPersonController {
 </dependency>
  ```
  
- #Restful风格的CRUD
+ ## Restful风格的CRUD
  ```
  //查
      @Autowired
@@ -143,7 +143,7 @@ public class TestPersonController {
     }
 
  ```
-#先前我们都是在dao层添加许多操作数据库的方法，但是用了、springboot之后，我们只需要继承一个接口即可
+## 先前我们都是在dao层添加许多操作数据库的方法，但是用了、springboot之后，我们只需要继承一个接口即可
 ```
 //dao层  封装好了许多方法，不用自己写sql语句
 public interface UserRepository extends JpaRepository<User,Integer> {
